@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Vsportin Hiring</h1>
+      <p id="description">Hurry up and fill out the form below to apply for a job at Vsportin!</p>
+    </header>
+    <main>
+      <form id="survey-form" aria-labelledby="title">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Enter Your Name" required />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="Enter Your Email" required />
+        </div>
+
+        <div>
+          <label for="number">Age</label>
+          <input id="number" type="number" name="age" placeholder="Enter Your Age" min="15" max="70" required />
+        </div>
+
+        <div>
+          <label for="dropdown">What Is Your Preferred Role?</label>
+          <select id="dropdown" name="role" required>
+            <option value="" disabled selected>(select one)</option>
+            <option value="front-end">Front-End Developer</option>
+            <option value="back-end">Back-End Developer</option>
+            <option value="full-stack">Full-Stack Developer</option>
+            <option value="ui-ux">UI/UX Designer</option>
+            <option value="project-manager">Project Manager</option>
+            <option value="sales-chief">Chief Of Sales</option>
+            <option value="marketing-chief">Chief Of Marketing</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Preferred Job Type</legend>
+          <div class="choice-group">
+            <label>
+              <input type="radio" value="Remote Work" name="job-type" checked /> Remote Work
+            </label>
+            <label>
+              <input type="radio" value="Onsite Work" name="job-type" /> Onsite Work
+            </label>
+          </div>
+        </fieldset>
+
+        <div>
+          <label for="comments">Additional Comments:</label>
+          <textarea id="comments" name="comments" placeholder="Add your thoughts here."></textarea>
+        </div>
+
+        <fieldset>
+          <legend>Agreement</legend>
+          <div class="choice-group">
+            <label>
+              <input type="checkbox" name="termsAgreement" required /> 
+              I agree to the <a href="#">Terms and Conditions</a>
+            </label>
+            <label>
+              <input type="checkbox" name="worldChange" required /> 
+              I wish to change the world
+            </label>
+          </div>
+        </fieldset>
+
+        <input type="submit" id="submit" value="Submit" />
+      </form>
+    </main>
+  </body>
+</html>

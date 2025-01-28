@@ -1,0 +1,154 @@
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the font for the entire page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Very dark background */
+  color: #e0e0e0; /* Light gray text for readability */
+  line-height: 1.6; /* Better readability with increased line height */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the form container */
+#survey-form {
+  background-color: #1e1e1e; /* Dark gray form background */
+  width: 100%;
+  max-width: 600px; /* Limit form width */
+  margin: 50px auto; /* Center the form */
+  padding: 20px 30px; /* Add padding inside the form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  color: #e0e0e0; /* Light text inside the form */
+}
+
+/* Style headings and description */
+#title {
+  text-align: center;
+  font-size: 28px;
+  color: #5794fc; /* Soft purple for titles */
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#description {
+  text-align: center;
+  font-size: 16px;
+  color: #bdbdbd; /* Lighter gray for descriptions */
+  margin-bottom: 5px;
+}
+
+/* Style labels and inputs */
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px; /* Reduced margin between label and input */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px; /* Reduced padding inside inputs */
+  margin-bottom: 15px; /* Reduced space between input fields */
+  background-color: #2c2c2c; /* Darker background for inputs */
+  border: 1px solid #444; /* Subtle border */
+  border-radius: 5px; /* Rounded corners */
+  color: #e0e0e0; /* Light text inside inputs */
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #a6a6a6; /* Slightly brighter placeholder color for better visibility */
+}
+
+textarea {
+  height: 120px;
+}
+
+select {
+  font-size: 16px;
+  background-color: #2c2c2c; /* Match input styling */
+  color: #e0e0e0;
+}
+
+/* Remove border from fieldsets */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Optional: Style the legend for grouping */
+fieldset legend {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+/* Style radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+label input[type="radio"],
+label input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+a {
+  color: #5794fc; /* Soft purple for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Style the submit button */
+#submit {
+  width: 100%;
+  padding: 10px;
+  background-color: #5794fc; /* Soft purple button */
+  color: #121212; /* Dark text for contrast */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#submit:hover {
+  background-color: #2874f7; /* Slightly darker purple on hover */
+  transform: scale(1.02); /* Subtle zoom effect */
+}
+
+#submit:focus {
+  outline: 2px solid #4a90e2; /* Visible focus state */
+  outline-offset: 2px;
+}
+
+/* Add responsiveness */
+@media (max-width: 600px) {
+  #survey-form {
+    padding: 20px;
+  }
+
+  #title {
+    font-size: 24px;
+  }
+
+  #description {
+    font-size: 14px;
+  }
+}
